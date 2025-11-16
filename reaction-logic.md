@@ -70,7 +70,128 @@ The receiver’s **baseline state** radically changes interpretation:
 Emojis pass through the “emotional filter” of the receiver.
 
 ---
+## Physiology
 
+Physiology refers to the sender’s and receiver’s physical and bodily state at the moment of communication.  
+It shapes how tone is produced and how it is perceived.  
+Physiological factors can amplify, soften, distort or redirect emotional signals in text.
+
+Typical physiological influences include:
+
+- fatigue or sleep deprivation  
+- physical pain or discomfort  
+- sensory overload (noise, brightness, multitasking)  
+- overstimulation or understimulation  
+- hormonal load, stress spikes, agitation  
+- illness, injury, migraine, tension  
+
+Physiology modifies interpretation patterns:
+
+- mild teasing when the sender is exhausted → can be read as irritability  
+- neutral wording when the receiver is stressed → may be read as rejection  
+- excessive emoji use during overstimulation → may imitate emotional “loudness”  
+
+Physiology does not directly change the linguistic form,  
+but it **changes the perceived strength and direction of tone and intention**.
+
+### How Physiology is Inferred in Text
+
+Physiology is not guessed “intuitively”.  
+It is inferred from measurable linguistic and behavioural signals that typically correlate with physical or sensory states.
+
+Common textual indicators include:
+
+- **response time patterns** (very fast, very delayed, inconsistent)  
+- **message length shifts** (short, abrupt replies vs unusually long rants)  
+- **interruption markers** (“—”, sudden topic drops, broken sentences)  
+- **inconsistent punctuation** (overuse of “!!!”, “…”, lack of punctuation)  
+- **spikes in profanity** (frustration, agitation, reduced self-regulation)  
+- **typos and autocorrect errors** (fatigue, distraction, sensory overload)  
+- **reduced emoji use** (low energy, emotional flattening)  
+- **excessive emoji use** (overstimulation, agitation, heightened arousal)  
+- **switching between tones** (cognitive overload, stress)  
+- **single-word replies** (“ok”, “yeah”, “fine”) indicating low capacity or exhaustion  
+
+These signals do not diagnose physiology.  
+They simply provide **patterns** that help determine how a message is likely to be read  
+(e.g., tired person → softer tone, stressed person → harsher reading).
+
+Physiology is therefore treated as **an interpretive modifier**,  
+derived from text structure and timing rather than explicit content.
+
+---
+
+## Environment
+
+Environment describes the situational context in which the message is exchanged.  
+It includes physical surroundings, social setting, digital context and the ongoing dynamic of the conversation.
+
+Environmental factors include:
+
+- home vs work vs public space  
+- private chat vs group chat  
+- calm setting vs chaotic or fragmented attention  
+- day vs late-night messaging  
+- presence of external pressure (tasks, deadlines, conflict)  
+- noise, distractions, interruptions  
+
+Environment influences interpretation by shifting expectations:
+
+- chaotic group chat → softer reading of abrupt tone  
+- emotionally charged setting → harsher interpretation of vagueness  
+- late-night conversation → higher sensitivity to subtle cues  
+- public or formal setting → reduced openness, stronger filtering of tone  
+
+Environment frames how the message should be read,  
+because it **changes the baseline assumptions** of tone, intention and reaction.
+
+### How Environment is Inferred in Text
+
+Environment is inferred from contextual, temporal and conversational patterns  
+that reveal where the sender is, what is happening around them,  
+and what social or situational constraints shape the message.
+
+Common environmental indicators include:
+
+#### **1. Temporal cues**
+- messaging at **unusual hours** (late night → heightened sensitivity, lowered inhibition)  
+- rapid-fire exchanges vs long gaps  
+- work-hour patterns vs weekend patterns  
+- sudden silence during expected availability  
+
+#### **2. Conversational structure**
+- **fragmented replies** (divided attention, multitasking)  
+- abrupt topic changes  
+- mixing formal and informal tone  
+- messages cut mid-thought (“—”, “wait”, “brb”)  
+- repeated re-clarifications (“what?”, “sorry?” → noise or distraction)  
+
+#### **3. Social context signals**
+- presence of group dynamics (replying as if multiple people are watching)  
+- softened tone in public or semi-public settings  
+- over-politeness → workplace environment  
+- avoidance of emotional markers → formal context or reduced privacy  
+
+#### **4. Physical environment indicators**
+- references to movement (“on the bus”, “running”, “driving”)  
+- inconsistent typing rhythm (typing while walking or distracted)  
+- environment-induced mistakes (autocorrect chaos, duplicated words)  
+- shorter, clipped replies → crowded or noisy surroundings  
+
+#### **5. Emotional atmosphere cues**
+- heightened sensitivity during conflict situations  
+- aggressive tone “leaking” after prior tension  
+- overly controlled wording → formal or stressful setting  
+- muted tone → public place, around other people, or limited privacy  
+
+Environment is not explicitly stated in most messages.  
+It is inferred from **patterns of timing, message structure, tone shifts, response behaviour, and social positioning**.
+
+Environment acts as a **contextual frame** that adjusts interpretation:  
+a message written at midnight in silence is not read the same way  
+as a message written at work, on a bus, or during a group conversation.
+
+---
 # 5. Social Meaning of Emojis (Signal Role)
 
 Emojis encode nonverbal social functions:
