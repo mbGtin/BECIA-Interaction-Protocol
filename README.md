@@ -118,6 +118,79 @@ Version 1.1 adds:
 
 These changes allow the protocol to capture *why* the sender uses a specific emoji or tone marker, not only *how* it sounds.
 ---
+
+## 11. Using BECIA data in Python
+
+Below is a minimal example of how to load and iterate over BECIA samples stored in `data/samples.jsonl`.
+
+### 11.1. Loading JSONL samples
+
+```python
+import json
+from typing import Iterator, Dict, Any
+
+
+def load_becia_samples(path: str) -> Iterator[Dict[str, Any]]:
+    """
+    Stream BECIA samples from a JSONL file.
+    Each line is a separate JSON object.
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            yield json.loads(line)
+
+
+if __name__ == "__main__":
+    samples = list(load_becia_samples("data/samples.jsonl"))
+
+    # Print a few samples with tone and intention
+    for sample in samples[:5]:
+        sample_id = sample.get("id")
+        text = sample.get("text")
+        tone = sample.get("tone")
+        intention = sample.get("intention")  # may be None for older examples
+
+        print(f"{sample_id}: {text}")
+        print(f"  tone      : {tone}")
+        print(f"  intention : {intention}")
+        print()
+```
+
+### 11.2. Typical usage in a training pipeline
+
+In a real model-training setup, `tone`, `intention` and `context_note` can be used as supervision signals:
+
+```python
+for sample in load_becia_samples("data/samples.jsonl"):
+    text = sample["text"]
+    emojis = sample.get("emojis", [])
+    tone = sample["tone"]
+    intention = sample.get("intention")
+    context_note = sample["context_note"]
+
+    # Example: build an input/output pair for a model
+    model_input = {
+        "text": text,
+        "emojis": emojis,
+    }
+
+    supervision = {
+        "tone": tone,
+        "intention": intention,
+        "explanation": context_note,
+    } 
+
+    # Here you would pass model_input and supervision into your
+    # favourite training or evaluation pipeline.
+```
+
+This keeps BECIA usage simple:  
+**JSONL in → Python dicts → model input + supervision.**
+
+---
 ---
 
 ## Release Notes — BECIA v1.1 (Intentionality Update)
