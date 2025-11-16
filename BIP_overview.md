@@ -1,3 +1,6 @@
+> **BECIA Interaction Protocol — Overview  
+> Version: v1.1 (Intentionality Update)**
+
 # BECIA Interaction Protocol (BIP) – Overview
 
 The **BECIA Interaction Protocol (BIP)** is a human–AI communication protocol based on the:
