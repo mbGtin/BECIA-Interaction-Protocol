@@ -220,3 +220,20 @@ BIP treats each emoji as:
 - an interaction trigger  
 
 Not as a static “emotion label”.
+
+---
+---
+## 6. Intentionality Notes (Becia v1.1)
+
+Emoji do not encode emotion alone — they often carry a communicative intention.
+
+Examples:
+- 😊 used to soften a critical or doubtful message  
+- 😅 used to hide tension while appearing playful  
+- … used to distance softly without rejecting  
+- 😏 used to maintain closeness through teasing  
+
+In BECIA v1.1 the interpretation of an emoji depends on:
+**Intention × Relationship × Context × State × Expected Reaction**
+
+This extends emoji semantics from emotional labels to communicative functions.
