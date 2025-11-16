@@ -115,3 +115,4 @@
 {"id":"ex_050","text":"Okay… I hear you","language":"EN","emojis":["…"],"tone":["hesitation","soft acceptance"],"context_note":"Emotionally charged pause."}fection."}
 {"id":"ex_049","text":"I’m screaming 😭","language":"EN","emojis":["😭"],"tone":["dramatic humour"],"context_note":"Not real crying."}
 {"id":"ex_050","text":"Okay… I hear you","language":"EN","emojis":["…"],"tone":["hesitation","soft acceptance"],"context_note":"Emotionally charged pause."}
+{"id":"ex_intent_001","text":"Sure, everything works… 😊","language":"EN","emojis":["…","😊"],"tone":["sarcasm","humour"],"intention":"softening a doubtful or negative message with humour","context_note":"Sender hides hesitation behind light humour to keep the interaction easy-going."}
