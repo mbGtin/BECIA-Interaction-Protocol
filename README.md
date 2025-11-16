@@ -78,3 +78,24 @@ BIP focuses on **dynamic interpretation**, not static categories.
   "tone": ["teasing", "elegant mockery"],
   "context_note": "Polite sarcastic disbelief; smirk used as controlled superiority."
 }
+```
+
+## 9. Intentionality (New in BECIA v1.1)
+
+BECIA v1.1 introduces an explicit layer for intention inference — a structured way of capturing *why* the sender used a specific tone, emoji or punctuation pattern.
+
+Unlike emotion labels, intention focuses on the communicative function of the message:
+- reassurance
+- distancing
+- teasing
+- softening
+- avoidance
+- seeking closeness
+- masking tension
+- signalling vulnerability
+
+Intentionality is not extracted from emoji alone, but from the full interaction between:
+
+**Intention × Relationship × Context × State × Environment**
+
+This upgrade aligns BECIA with next-generation conversational AI research, where the goal is to recover the underlying motive, not the surface emotion.
