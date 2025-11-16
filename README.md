@@ -116,3 +116,23 @@ Version 1.1 adds:
 - dedicated examples in `intentionality_examples.md`  
 
 These changes allow the protocol to capture *why* the sender uses a specific emoji or tone marker, not only *how* it sounds.
+---
+---
+
+## Release Notes — BECIA v1.1 (Intentionality Update)
+
+**Date:** 2025-11  
+**Status:** Stable  
+**Changes introduced:**
+
+- Added the `intention` field to the JSON schema  
+- Added intentionality examples (`intentionality_examples.md`)  
+- Updated `reaction_logic.md` with mismatch patterns  
+- Expanded emoji semantics with communicative intention  
+- Added three intentionality samples to `samples.jsonl`  
+- Added version headers across documentation  
+- Minor cleanup and consistency fixes  
+
+**Summary:**  
+BECIA v1.1 extends the protocol beyond surface-level tone markers by integrating *communicative intention* as a core interpretive dimension.  
+This update strengthens the protocol's ability to model human social inference.
