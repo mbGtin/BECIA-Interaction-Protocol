@@ -54,7 +54,8 @@
 
 {"id":"ex_046","text":"Behave 😏","language":"EN","emojis":["😏"],"tone":["teasing","control"],"context_note":"Light dominance."}
 {"id":"ex_047","text":"I can’t stop laughing 😂","language":"EN","emojis":["😂"],"tone":["humour"],"context_note":"High amusement."}
-{"id":"ex_048","text":"Stay safe ❤️","language":"EN","emojis":["❤️"],"tone":["warmth","care"],"context_note":"Protective af{"id":"ex_001","text":"Sure, everything works… 😂","language":"EN","emojis":["…","😂"],"tone":["sarcasm","humour"],"context_note":"Hesitation softened by big humour."}
+{"id":"ex_048","text":"Stay safe ❤️","language":"EN","emojis":["❤️"],"tone":["warmth","care"],"context_note":"Protective af."}
+{"id":"ex_001","text":"Sure, everything works… 😂","language":"EN","emojis":["…","😂"],"tone":["sarcasm","humour"],"context_note":"Hesitation softened by big humour."}
 {"id":"ex_002","text":"I'm not stressed, I'm just… thinking 😅","language":"EN","emojis":["…","😅"],"tone":["hesitation","micro-humour"],"context_note":"Downplaying tension with half-laugh."}
 {"id":"ex_003","text":"Thank you ❤️ That really helped.","language":"EN","emojis":["❤️"],"tone":["warmth","deep affection"],"context_note":"Sincere emotional closeness."}
 {"id":"ex_004","text":"WHY would you do that 😭😂","language":"EN","emojis":["😭","😂"],"tone":["dramatic humour","playful exaggeration"],"context_note":"Mock-complaint joke."}
