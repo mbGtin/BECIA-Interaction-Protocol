@@ -208,7 +208,6 @@ soft pause, gentle hesitation, emotional space
 threat, judgment, emotional withdrawal  
 
 ---
-
 # 10. Summary Rule for Annotation
 
 When annotating:
@@ -219,3 +218,42 @@ When annotating:
 
 Because all six factors vary between individuals,  
 **emoji interpretation is inherently personal, contextual and dynamic.**
+
+---
+---
+
+## 11. Intentionality and Reaction Mismatch (Becia v1.1)
+
+Becia v1.1 explicitly separates:
+
+- **tone** – how the message sounds on the surface,
+- **intention** – what the sender is trying to achieve socially,
+- **reaction** – how the receiver is likely to feel or respond.
+
+In practice:
+
+> Perceived meaning = f(text, emojis, relationship, context, sender_state, receiver_state, intention)
+
+Two messages can share the same tone but differ in intention:
+
+- teasing that maintains closeness  
+- teasing that creates distance
+
+And the same intention can lead to different reactions depending on the receiver:
+
+- “softening a refusal” may be read as considerate  
+- or as passive-aggressive, if trust is low.
+
+For BECIA v1.1 the annotator should:
+
+1. Infer the **primary intention** (if possible).  
+2. Describe the **likely reaction** in `context_note`.  
+3. Optionally mark when intention and reaction are clearly misaligned.
+
+Typical mismatch patterns:
+
+- intention: reassurance → reaction: still anxious  
+- intention: distancing politely → reaction: feeling rejected  
+- intention: humour to mask tension → reaction: confusion or hurt  
+
+This keeps reaction logic grounded in social reality, not only in surface-level emotion.
