@@ -1,3 +1,6 @@
+> **BECIA — Behavioral Emotion & Context Inference Architecture  
+> Version: v1.1 (Intentionality Update)**
+
 # BECIA Interaction Protocol, BIP (**Behavioral Emotion & Context Inference Architecture**) 
 The **BECIA Interaction Protocol (BIP)** is a human–AI communication protocol for interpreting emojis, tone, nonverbal cues, and contextual meaning in digital text.
 
