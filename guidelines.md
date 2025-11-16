@@ -209,3 +209,9 @@ The **BIP guidelines** aim to:
 - model dynamic emotional reactions  
 - move beyond rigid emotion labels  
 - support training of socially-aware AI models
+
+### 9. Intentionality (Becia v1.1)
+
+For v1.1, annotators may additionally fill the `intention` field with a short phrase describing the primary communicative motive (e.g. “reassurance”, “distancing”, “teasing”, “softening a negative message”).
+
+* This field is optional in early experiments, but recommended when the annotator can clearly infer why the sender used a given emoji or tone pattern.
