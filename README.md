@@ -31,6 +31,7 @@ A human-inspired approach to understanding emotional signals, relational context
 | `emoji_semantics.md` | Meaning and social usage of emojis |
 | `reaction_logic.md` | How emojis trigger different reactions |
 | `data/samples.jsonl` | Example dataset entries |
+| `intentionality-examples.md` | Focused examples for the intentionality layer |
 
 ---
 
