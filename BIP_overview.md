@@ -139,3 +139,25 @@ BIP is a conceptual and practical prototype designed to:
 - guide dataset creators and alignment researchers  
 
 It is intentionally small, readable, and extendable.
+
+---
+## 6. Intentionality Layer (added in BECIA v1.1)
+
+This layer captures the sender's underlying communicative motive:
+not what the emoji expresses, but what the sender *tries to achieve* with it.
+
+Examples of common intention types:
+- reassurance
+- protecting the receiver’s feelings
+- softening a negative message
+- hiding tension behind humour
+- distancing without rejecting
+- signalling closeness or trust
+- playful challenge or teasing
+- showing vulnerability indirectly
+
+The key idea:
+**Emojis and tone markers reveal the function of the message, not its emotional category.**
+
+This layer is evaluated together with:
+Intention × Relationship × Context × State × Predicted Reaction.
