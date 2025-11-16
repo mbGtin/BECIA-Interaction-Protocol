@@ -99,3 +99,17 @@ Intentionality is not extracted from emoji alone, but from the full interaction 
 **Intention × Relationship × Context × State × Environment**
 
 This upgrade aligns BECIA with next-generation conversational AI research, where the goal is to recover the underlying motive, not the surface emotion.
+
+---
+---
+
+## 10. New in BECIA v1.1
+
+Version 1.1 adds:
+
+- an explicit **Intentionality Layer**  
+- the `intention` field in the core JSON schema  
+- extended logic in `reaction_logic.md`  
+- dedicated examples in `intentionality_examples.md`  
+
+These changes allow the protocol to capture *why* the sender uses a specific emoji or tone marker, not only *how* it sounds.
