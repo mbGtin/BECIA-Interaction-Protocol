@@ -1,166 +1,196 @@
-> **BECIA Interaction Protocol — Overview  
-> Version: v1.1 (Intentionality Update)**
+# BECIA Interaction Protocol — Overview  
+### Version: v1.1 (Intentionality Update)
 
-# BECIA Interaction Protocol (BIP) – Overview
+The **BECIA Interaction Protocol (BIP)** defines how an AI system interprets  
+**emojis, tone, contextual cues, sender intention, and emotional reactions**  
+in a human-aligned way.
 
-The **BECIA Interaction Protocol (BIP)** is a human–AI communication protocol based on the:
+BIP is based on the:
 
 **Behavioral Emotion & Context Inference Architecture**
 
-It defines how an AI model should interpret:
-- emojis as nonverbal cues  
-- tone and emotional attitude  
-- contextual meaning  
-- relationship-driven nuance  
-- dynamic reactions shaped by human state and environment  
-
-BIP moves beyond static “emotion labels” into **dynamic human-like reasoning**.
+It models the full chain of human emotional reasoning rather than relying on flat sentiment labels.
 
 ---
 
 # 1. Design Principles
 
 ### 1.1 Emojis are nonverbal signals  
-They mirror:
+Emojis mimic real-world nonverbal behaviour:
+
 - facial expressions  
 - micro-expressions  
-- tension  
-- attitude  
+- hesitation or tension  
 - emotional intensity  
+- social alignment  
+- playful vs serious intent  
 
-### 1.2 Context is required, not optional  
+### 1.2 Context is required  
 Meaning depends on:
+
 - relationship  
-- social history  
 - topic sensitivity  
+- history  
 - cultural and gender norms  
+- conversational frame  
+- implicit expectations  
 
 ### 1.3 Sender ≠ receiver  
-The sender’s intention is not the same as the receiver’s emotional reaction.
+The sender's intention often differs from how the receiver interprets it.
 
 ### 1.4 Physiology and environment matter  
-Fatigue, illness, stress, weather, discomfort → all change interpretation.
+Text is shaped by:
+
+- fatigue, illness, hunger  
+- sensory load  
+- environmental noise  
+- comfort vs discomfort  
+- time of day  
+
+These factors modify emotional interpretation.
 
 ### 1.5 Interpretation is dynamic  
-Emojis are not static labels.  
-Meaning is computed from interacting factors.
+Emojis are not static labels  
+—they participate in a dynamic reasoning process.
 
 ### 1.6 Human-aligned reasoning  
-The protocol reconstructs how humans infer tone and emotional context.
+BIP models how humans actually infer tone and emotional meaning.
 
 ---
 
 # 2. Layers of the Protocol
 
-BIP is a four-layer process.
+BIP operates across **four main layers** (plus intentionality in v1.1).
 
 ---
 
 ## 2.1 Signal Layer  
-**Input:** text + emojis + punctuation  
-Tasks:
-- detect emojis  
-- detect ellipsis `…` as emotional marker  
-- detect repetition (😂😂😂 vs 😂)  
-- detect emphasis (ALL CAPS, “???”)  
-- detect softeners and intensifiers  
+**Input:** text, emojis, punctuation  
+Extract:
 
-**Output:** structured list of nonverbal markers
+- emojis  
+- ellipsis `…`  
+- emphasis (ALL CAPS, repeating letters)  
+- repetition (😂😂😂)  
+- softeners and intensifiers  
+
+**Output:** structured nonverbal markers.
 
 ---
 
 ## 2.2 Context Layer  
-**Input:** signals + conversational context  
-Context includes:
-- relationship (friend, partner, stranger, authority)  
-- history (conflict, closeness, neutrality)  
-- gender norms (e.g., heart colors)  
-- social expectations  
-- sensitivity of the topic  
+**Input:** signals + conversation frame  
+Includes:
 
-**Output:** contextual interpretation frame
+- social relationship  
+- recent events  
+- topic type  
+- shared history  
+- cultural/gender patterns  
+
+**Output:** contextual interpretation frame.
 
 ---
 
 ## 2.3 State Layer (Receiver)  
-**Input:** context + text tone  
-Estimates:
-- emotional baseline (stressed, calm, lonely, overloaded)  
-- inferred physiological modifiers (fatigue, illness, comfort)  
-- environmental modifiers (weather, noise, cold, discomfort)  
+Infers:
 
-**Output:** sensitivity profile of the receiver
+- emotional baseline (calm, stressed, lonely, tired)  
+- physiological modifiers (fatigue, hunger, discomfort)  
+- environmental context (noise, privacy, pressure)  
+
+**Output:** receiver sensitivity profile.
 
 ---
 
 ## 2.4 Reaction Layer  
-**Input:** signals + context + state  
-Tasks:
-- infer tone  
-- predict emotional impact  
-- detect mismatch between intention & reaction  
-- generate 1–3 tone labels  
-- produce a concise context note  
+Generates:
 
-**Output:** BIP annotation entry
+- 1–3 tone labels  
+- predicted emotional impact  
+- mismatch between intention and reaction  
+- `context_note` with concise reasoning  
+
+**Output:** final BIP annotation.
 
 ---
 
 # 3. Core Interpretation Equation
 
-Simplified:
+```
+Reaction ≈ Intention × Relationship × Context × State × Physiology × Environment
+```
 
-**Reaction ≈  
-Intention × Relationship × Context × Emotional State × Physiology × Environment**
+A small change in any factor can flip meaning:
 
-A change in any element can flip meaning:
 - humour → humiliation  
-- affection → sadness  
 - teasing → hostility  
-- flirt → contempt  
+- affection → sadness  
+- softening → passive-aggressiveness  
 
 ---
 
-# 4. File Roles
+# 4. File Roles in the Repository
 
 | File | Purpose |
 |------|---------|
-| `guidelines.md` | How to annotate using BIP |
+| `guidelines.md` | Annotation workflow |
 | `emoji_semantics.md` | Social meaning of emojis |
-| `reaction_logic.md` | How context and state modify reactions |
-| `data/samples.jsonl` | Example annotated entries |
+| `reaction_logic.md` | How context modifies interpretation |
+| `data/samples.jsonl` | Example dataset |
+| `schema.json` | JSON schema |
+| `intentionality_examples.md` | Intent-focused examples |
 
 ---
 
 # 5. Intended Use
 
-BIP is a conceptual and practical prototype designed to:
+BECIA is designed to support:
 
-- inspire richer emoji handling in NLP  
-- support tone/emotion annotation  
-- demonstrate contextual emotional reasoning  
-- guide dataset creators and alignment researchers  
+- contextual emotion modelling  
+- tone classification  
+- nonverbal cue interpretation  
+- AI alignment and safety research  
+- dataset creation and annotation consistency  
+- teaching materials in AI communication  
 
-It is intentionally small, readable, and extendable.
+It is intentionally readable and modular.
 
 ---
-## 6. Intentionality Layer (added in BECIA v1.1)
 
-This layer captures the sender's underlying communicative motive:
-not what the emoji expresses, but what the sender *tries to achieve* with it.
+# 6. Intentionality Layer (v1.1)
 
-Examples of common intention types:
-- reassurance
-- protecting the receiver’s feelings
-- softening a negative message
-- hiding tension behind humour
-- distancing without rejecting
-- signalling closeness or trust
-- playful challenge or teasing
-- showing vulnerability indirectly
+**Intentionality** describes *why* a sender uses a certain tone or emoji.
 
-The key idea:
-**Emojis and tone markers reveal the function of the message, not its emotional category.**
+Common intentions include:
 
-This layer is evaluated together with:
-Intention × Relationship × Context × State × Predicted Reaction.
+- softening a negative message  
+- reassurance  
+- distancing  
+- teasing for closeness  
+- masking vulnerability  
+- signalling trust  
+- controlling social distance  
+
+This layer interacts with:
+
+```
+Intention × Relationship × Context × State × Expected Reaction
+```
+
+Intentionality is essential for modelling true human emotional reasoning.
+
+---
+
+# 7. Summary
+
+BECIA defines a **multi-layered protocol** for interpreting:
+
+- emotional signals  
+- social meaning  
+- relational nuance  
+- physiological and environmental modifiers  
+- sender intention  
+- receiver reaction  
+
+It moves beyond sentiment analysis into **human-aligned contextual understanding**.
