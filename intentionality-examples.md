@@ -1,69 +1,128 @@
-# BECIA v1.1 — Intentionality Examples
+# Intentionality Examples — BECIA v1.1
+### Communicative Motives in Emoji-Based Interaction
 
-This document provides examples for the new `intention` field introduced in BECIA v1.1.  
-It illustrates how the same emoji or tone marker can serve different communicative motives depending on relationship and context.
+The **intentionality layer** in BECIA v1.1 captures  
+*why the sender shaped the message the way they did*.
 
----
+Tone shows **how** it sounds.  
+Intention shows **why** it was done.  
+Reaction shows **how the receiver is likely to feel**.
 
-## 1. Softening a doubtful message
-**Text:** “Sure, everything works… 😊”  
-**Tone:** sarcasm, humour  
-**Intention:** softening a negative or doubtful message  
-**Why:** The emoji acts as a shield — making the uncertainty sound less harsh.
-
----
-
-## 2. Reassurance disguised as humour
-**Text:** “Don’t worry about it haha 😅”  
-**Tone:** nervous humour  
-**Intention:** reassurance  
-**Why:** The sender lowers tension by acting playful, even if they feel pressure.
+Below are clean, minimal examples.
 
 ---
 
-## 3. Distancing without rejecting
-**Text:** “yeah, maybe later…”  
-**Tone:** vague, softened  
-**Intention:** distancing  
-**Why:** Ellipsis is used to avoid direct refusal.
+# 1. Softening a Doubtful Message
+
+**Text:**  
+“Sure, everything works… 😊”
+
+**Tone:**  
+sarcasm, micro-humour
+
+**Intention:**  
+softening a negative or doubtful message
+
+**Why:**  
+The smile is a buffer — the sender reduces the harshness of the implied criticism.
 
 ---
 
-## 4. Teasing to maintain closeness
-**Text:** “Oh sure, you always say that 😏”  
-**Tone:** teasing, playful mockery  
-**Intention:** maintaining closeness  
-**Why:** The smirk creates a safe, joking frame between familiar people.
+# 2. Reassurance Disguised as Humour
+
+**Text:**  
+“Don’t worry about it haha 😅”
+
+**Tone:**  
+nervous humour, soft embarrassment
+
+**Intention:**  
+reassurance
+
+**Why:**  
+The sender hides their tension to avoid increasing the receiver’s stress.
 
 ---
 
-## 5. Masking vulnerability
-**Text:** “I’m fine lol 😂”  
-**Tone:** exaggerated humour  
-**Intention:** masking discomfort or vulnerability  
-**Why:** The loud emoji hides the real emotional state.
+# 3. Distancing Without Rejecting
+
+**Text:**  
+“yeah, maybe later…”
+
+**Tone:**  
+vague, softened hesitation
+
+**Intention:**  
+distancing politely
+
+**Why:**  
+Ellipsis avoids a direct “no”, preserving social harmony.
 
 ---
 
-## 6. Signalling trust
-**Text:** “Thank you ❤️”  
-**Tone:** warmth, affection  
-**Intention:** showing closeness  
-**Why:** Heart signals emotional transparency and trust.
+# 4. Teasing to Maintain Closeness
+
+**Text:**  
+“Oh sure, you always say that 😏”
+
+**Tone:**  
+teasing, elegant mockery
+
+**Intention:**  
+maintaining closeness through playful challenge
+
+**Why:**  
+The smirk introduces controlled, safe sharpness appropriate for a close relationship.
 
 ---
 
-### Summary
+# 5. Masking Vulnerability
 
-Intentionality focuses on **why** the message was shaped in this particular way, not just **what** emotion is visible on the surface.
+**Text:**  
+“I’m fine lol 😂”
 
-It synthesises:
+**Tone:**  
+dramatic humour
 
-- Relationship  
-- Context  
-- State  
-- Tone  
-- Emoji behaviour  
-- Expected reaction  
+**Intention:**  
+masking discomfort or emotional vulnerability
 
-This aligns BECIA with next-generation conversational AI research.
+**Why:**  
+Big-laugh emoji hides the emotional weight behind the statement.
+
+---
+
+# 6. Signalling Trust or Openness
+
+**Text:**  
+“Thank you ❤️”
+
+**Tone:**  
+warmth, deep affection
+
+**Intention:**  
+expressing trust / emotional transparency
+
+**Why:**  
+The red heart signals sincerity and meaningful closeness.
+
+---
+
+# Summary
+
+Intentionality identifies the **function** of the message:
+
+```
+Intention = social motive 
+            (reassurance, distancing, teasing, softening, masking, signalling)
+```
+
+It interacts with:
+
+```
+Intention × Relationship × Context × State × Reaction
+```
+
+and allows BECIA to represent not only tone,  
+but the *reason* behind the tone —  
+a critical component of human-aligned communication modeling.
