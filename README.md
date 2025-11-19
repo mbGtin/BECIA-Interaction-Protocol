@@ -1,77 +1,79 @@
-> **BECIA — Behavioral Emotion & Context Inference Architecture  
-> Version: v1.1 (Intentionality Update)**
+#  BECIA — Behavioral Emotion & Context Inference Architecture
+### Version: v1.1 — Intentionality Update
 
-# BECIA Interaction Protocol, BIP (**Behavioral Emotion & Context Inference Architecture**) 
-The **BECIA Interaction Protocol (BIP)** is a human–AI communication protocol for interpreting emojis, tone, nonverbal cues, and contextual meaning in digital text.
+The **BECIA Interaction Protocol (BIP)** is a human–AI communication framework for interpreting:
 
-BIP is based on the:
+- emojis as nonverbal signals  
+- tone and emotional attitude  
+- sender intention  
+- contextual meaning  
+- relationship-driven nuance  
+- physiological and environmental modifiers  
 
-
-A human-inspired approach to understanding emotional signals, relational context, and dynamic interpretation.
-
----
-
-## Goals
-
-- Define a clear protocol for reading emojis as nonverbal cues  
-- Show how tone, context and relationship shape meaning  
-- Provide annotation rules for emotional nuance  
-- Offer a JSONL micro-dataset with rich context notes  
-- Demonstrate how AI can move beyond flat “emotion labels”  
+BECIA moves beyond flat emotion labels and models **dynamic emotional inference**, closer to real human interpretation.
 
 ---
 
-## Files
+##  Why BECIA?
+
+Most NLP systems treat emojis as noise or simple sentiment markers.  
+BECIA treats them as **compressed behavioural signals**, whose meaning depends on:
+
+- context  
+- relationship  
+- emotional baseline  
+- intention  
+- environment  
+- physiology  
+
+This repository provides:
+
+- a full interpretation protocol (BIP)  
+- an annotation schema  
+- detailed emoji semantics  
+- reaction logic  
+- a high-quality JSONL dataset with expert notes  
+- examples of communicative intention (v1.1 update)
+
+---
+
+##  Repository Structure
 
 | File | Purpose |
 |------|---------|
 | `README.md` | Project overview |
-| `BIP_overview.md` | The protocol layers and model reasoning |
-| `guidelines.md` | Annotation rules + JSONL schema |
-| `emoji_semantics.md` | Meaning and social usage of emojis |
-| `reaction_logic.md` | How emojis trigger different reactions |
-| `data/samples.jsonl` | Example dataset entries |
-| `intentionality-examples.md` | Focused examples for the intentionality layer |
+| `BIP_overview.md` | Full protocol description (layers, reasoning) |
+| `guidelines.md` | Annotation workflow (BIP steps) |
+| `emoji_semantics.md` | Social meaning of emojis |
+| `reaction_logic.md` | How context, state, physiology, environment modify tone |
+| `intentionality_examples.md` | New v1.1 examples (sender motive) |
+| `data/samples.jsonl` | High-quality annotated examples |
+| `data/schema.json` | JSON schema for dataset entries |
 
 ---
 
-## Emoji as Nonverbal Communication
+##  What BECIA Models
 
-Emojis imitate human nonverbal signals:
+BECIA interprets each message across interacting layers:
 
-- facial expressions  
-- micro-expressions  
-- emotional intensity  
-- pauses, hesitation  
-- relational cues  
-- softened tone  
-- social alignment  
+- **Signal** — emojis, punctuation, repetition, emphasis  
+- **Context** — relationship, topic, conversational frame  
+- **State** — emotional baseline of the receiver  
+- **Physiology** — fatigue, stress, sensory load  
+- **Environment** — noise, privacy, timing, pressure  
+- **Intention** — what the sender tries to achieve socially  
+- **Reaction** — how the message is likely to be felt  
 
-They are not decorations.  
-They are **compressed nonverbal communication**.
+This explains why the same emoji can shift between:
 
----
-
-## Emotion Labels vs Nonverbal Meaning
-
-Traditional sentiment → “joy”, “sadness”, “anger”.  
-This is flat.
-
-Nonverbal meaning includes:
-
-- tone  
-- attitude  
-- intensity  
-- relationship  
-- state of the receiver  
-- social norms  
-- emotional mismatch  
-
-BIP focuses on **dynamic interpretation**, not static categories.
+- humour → humiliation  
+- teasing → hostility  
+- affection → sadness  
+- softening → passive-aggressiveness  
 
 ---
 
-## Example JSONL Entry
+##  Example JSONL Entry
 
 ```json
 {
@@ -80,133 +82,57 @@ BIP focuses on **dynamic interpretation**, not static categories.
   "language": "EN",
   "emojis": ["…", "😏"],
   "tone": ["teasing", "elegant mockery"],
-  "context_note": "Polite sarcastic disbelief; smirk used as controlled superiority."
+  "context_note": "Ellipsis indicates doubt; smirk adds polite superiority."
 }
 ```
 
-## 9. Intentionality (New in BECIA v1.1)
-
-BECIA v1.1 introduces an explicit layer for intention inference — a structured way of capturing *why* the sender used a specific tone, emoji or punctuation pattern.
-
-Unlike emotion labels, intention focuses on the communicative function of the message:
-- reassurance
-- distancing
-- teasing
-- softening
-- avoidance
-- seeking closeness
-- masking tension
-- signalling vulnerability
-
-Intentionality is not extracted from emoji alone, but from the full interaction between:
-
-**Intention × Relationship × Context × State × Environment**
-
-This upgrade aligns BECIA with next-generation conversational AI research, where the goal is to recover the underlying motive, not the surface emotion.
-
----
 ---
 
-## 10. New in BECIA v1.1
+##  Intentionality Layer (v1.1)
 
-Version 1.1 adds:
+BECIA v1.1 adds a new field: **intention**, describing *why* the sender uses a given emoji or tone pattern.
 
-- an explicit **Intentionality Layer**  
-- the `intention` field in the core JSON schema  
-- extended logic in `reaction_logic.md`  
-- dedicated examples in `intentionality_examples.md`  
+Examples:
 
-These changes allow the protocol to capture *why* the sender uses a specific emoji or tone marker, not only *how* it sounds.
+- softening a negative message  
+- reassurance through humour  
+- distancing without rejection  
+- teasing to maintain closeness  
+- masking vulnerability  
+
+This aligns BECIA with emerging research in contextual emotional modelling.
+
 ---
 
-## 11. Using BECIA data in Python
-
-Below is a minimal example of how to load and iterate over BECIA samples stored in `data/samples.jsonl`.
-
-### 11.1. Loading JSONL samples
+##  Using the Dataset (Python)
 
 ```python
-import json
-from typing import Iterator, Dict, Any
+from data_loader import load_becia_samples
 
+samples = list(load_becia_samples("data/samples.jsonl"))
 
-def load_becia_samples(path: str) -> Iterator[Dict[str, Any]]:
-    """
-    Stream BECIA samples from a JSONL file.
-    Each line is a separate JSON object.
-    """
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            yield json.loads(line)
-
-
-if __name__ == "__main__":
-    samples = list(load_becia_samples("data/samples.jsonl"))
-
-    # Print a few samples with tone and intention
-    for sample in samples[:5]:
-        sample_id = sample.get("id")
-        text = sample.get("text")
-        tone = sample.get("tone")
-        intention = sample.get("intention")  # may be None for older examples
-
-        print(f"{sample_id}: {text}")
-        print(f"  tone      : {tone}")
-        print(f"  intention : {intention}")
-        print()
+for s in samples[:5]:
+    print(s["text"], s["tone"], s.get("intention"))
 ```
 
-### 11.2. Typical usage in a training pipeline
+---
 
-In a real model-training setup, `tone`, `intention` and `context_note` can be used as supervision signals:
+##  License
 
-```python
-for sample in load_becia_samples("data/samples.jsonl"):
-    text = sample["text"]
-    emojis = sample.get("emojis", [])
-    tone = sample["tone"]
-    intention = sample.get("intention")
-    context_note = sample["context_note"]
+MIT License (or any other license you choose).
 
-    # Example: build an input/output pair for a model
-    model_input = {
-        "text": text,
-        "emojis": emojis,
-    }
+---
 
-    supervision = {
-        "tone": tone,
-        "intention": intention,
-        "explanation": context_note,
-    } 
+##  Citation
 
-    # Here you would pass model_input and supervision into your
-    # favourite training or evaluation pipeline.
+```
+Benderyszyn, M. (2025). BECIA — Behavioral Emotion & Context Inference Architecture (v1.1).
+GitHub Repository. https://github.com/mbGtin/BECIA-Interaction-Protocol
 ```
 
-This keeps BECIA usage simple:  
-**JSONL in → Python dicts → model input + supervision.**
-
----
 ---
 
-## Release Notes — BECIA v1.1 (Intentionality Update)
+## ✔️ Status
 
-**Date:** 2025-11  
-**Status:** Stable  
-**Changes introduced:**
-
-- Added the `intention` field to the JSON schema  
-- Added intentionality examples (`intentionality_examples.md`)  
-- Updated `reaction_logic.md` with mismatch patterns  
-- Expanded emoji semantics with communicative intention  
-- Added three intentionality samples to `samples.jsonl`  
-- Added version headers across documentation  
-- Minor cleanup and consistency fixes  
-
-**Summary:**  
-BECIA v1.1 extends the protocol beyond surface-level tone markers by integrating *communicative intention* as a core interpretive dimension.  
-This update strengthens the protocol's ability to model human social inference.
+**Stable — v1.1**  
+Next planned update: v1.2 (extended intentionality, mismatch patterns, speaker profiles).
