@@ -1,15 +1,19 @@
 # Emoji Semantics — BECIA Interaction Protocol (BIP)
+### Version: v1.1
 
-This document describes how emojis function as **nonverbal signals** rather than static emotion labels.
+This document describes how emojis function under the  
+**BECIA Interaction Protocol (BIP)** as *nonverbal signals*, not static emotional labels.
 
-Emojis are treated as:
-- tone markers  
-- relational cues  
-- social signals  
-- emotional intensifiers  
-- nonverbal triggers  
+Emojis in BIP encode:
 
-They compress facial expressions, attitude, emotional intensity, and subtle human behaviour into a single symbol.
+- facial expression  
+- micro-expression  
+- attitude  
+- emotional intensity  
+- relational meaning  
+- softening or sharpening of tone  
+
+They act as compressed behavioural cues.
 
 ---
 
@@ -17,193 +21,188 @@ They compress facial expressions, attitude, emotional intensity, and subtle huma
 
 Emojis mirror offline nonverbal communication:
 
-- facial expression  
-- micro-expression  
 - tension / relaxation  
-- attitude  
-- emotional intensity  
+- playfulness vs seriousness  
+- closeness vs distance  
+- dominance vs submission  
 - inclusion vs exclusion  
-- flirtation vs contempt  
-- softening vs sharpening tone  
 
-They are **not decorative icons**, but **compressed behavioural signals**.
-
----
-
-# 2. High-Impact Emojis and Their Social Meaning
-
-Below: the core emojis included in v0.1 of BIP.
+Emojis rarely express a single “emotion”.  
+They function as **social signals**.
 
 ---
 
-## 2.1 😂 — Full Laugh (Big Humour)
+# 2. High-Impact Emojis (Core Set)
 
-**Core meaning:**  
-Strong, explicit laughter. High-intensity reaction.  
-Often expresses: “You’re kidding”, “That’s wild”.
+Below are the primary emojis used in v1.1 of BIP.
 
-**Tone patterns:**  
-- humour  
-- big amusement  
+---
+
+## 2.1 😂 — Full Laugh (High-Intensity Humour)
+
+**Meaning:**  
+Strong explicit laughter; high emotional intensity.
+
+**Positive roles:**  
+- shared humour  
+- high amusement  
 - dramatic reaction  
-- sometimes dominance (laughing *at* someone)
 
-**Positive use:**  
-Mutual joke, group laughing together.
+**Negative roles:**  
+- mocking  
+- humiliating  
+- laughing *at* someone  
 
-**Negative use:**  
-Mocking, humiliating, excluding someone.
+Tone categories:  
+`humour`, `dramatic humour`, `shock`
 
 ---
 
-## 2.2 😅 — Soft Laugh (Half😂)
+## 2.2 😅 — Soft Laugh (Micro-Humour)
 
-**Core meaning:**  
-Small laugh, polite embarrassment, soft tension release.  
-Emotionally: “hah… omg”, “oops”, “yeah… sorry”.
+**Meaning:**  
+Polite embarrassment; tension release; half-laugh.
 
-**Tone patterns:**  
-- micro-humour  
-- soft embarrassment  
-- gentle smoothing  
-- polite social repair  
+**Positive roles:**  
+- friendliness  
+- smoothing awkwardness  
+- gentle self-correction  
 
-**Positive use:**  
-Friendly, non-threatening humour.
+**Negative roles:**  
+- downplaying seriousness  
+- avoiding responsibility  
+- subtle irritation  
 
-**Negative use:**  
-Downplaying seriousness, avoidance, or irritation.
+Tone categories:  
+`micro-humour`, `hesitation`, `soft embarrassment`
 
 ---
 
 ## 2.3 😏 — Smirk (Tease / Elegant Mockery)
 
-**Core meaning:**  
-Smooth, controlled, slightly smug expression.  
-Always carries attitude.
+**Meaning:**  
+Controlled, slightly smug expression. Always carries attitude.
 
 **Positive roles:**  
-- flirt  
+- flirting  
 - playful dominance  
-- confident tease  
+- teasing closeness  
 
 **Negative roles:**  
 - elegant mockery  
 - polite superiority  
 - social sharpness  
 
-**Tone labels:**  
-teasing, flirt, elegant mockery, confident sarcasm
+Tone categories:  
+`teasing`, `elegant mockery`, `confident sarcasm`, `flirt`
 
 ---
 
 ## 2.4 ❤️ — Red Heart (Deep Affection)
 
-**Core meaning:**  
-Intense emotional closeness. Romantic or familial bond.  
-Heavy emotional weight.
+**Meaning:**  
+Strong emotional closeness; heavy emotional weight.
 
-**Typical usage:**  
+**Typical use:**  
 - partners  
-- strong family ties  
-- long-term closeness  
+- family  
+- deep friendships  
+- sincere gratitude  
 
-**Tone patterns:**  
-- deep affection  
-- warmth  
-- emotional sincerity  
+Tone categories:  
+`warmth`, `deep affection`, `emotional sincerity`
 
 ---
 
 ## 2.5 🩷 — Pink Heart (Friendly Warmth)
 
-**Core meaning:**  
-Soft affection, supportive tone.  
-Often feminine-coded, used between friends.
+**Meaning:**  
+Soft affection; supportive tone; often feminine-coded.
 
-**Typical usage:**  
-- friendly support  
-- gentle warmth  
-- emotional reassurance  
+**Typical use:**  
+- friendship  
+- gentle reassurance  
+- non-romantic support  
 
-**Tone patterns:**  
-warmth, friendliness, soft positivity
+Tone categories:  
+`friendly warmth`, `soft positivity`
 
 ---
 
 ## 2.6 💙 — Blue Heart (Symbolic / Neutral Support)
 
-**Core meaning:**  
-Neutral affection, symbolic support, thematic colour use.
+**Meaning:**  
+Neutral affection, thematic colour, symbolic gesture.
 
-Examples:
-- posts about sons or boys  
+Common use cases:  
+- posts about sons/boys  
 - awareness campaigns  
-- neutral positivity  
+- neutral support  
 
-**Tone patterns:**  
-symbolic affection, neutral support
+Tone categories:  
+`symbolic positivity`, `neutral support`
 
 ---
 
 ## 2.7 Other Hearts (💛💚🧡💜🤍🖤)
 
-These hearts operate primarily through **context**:
+These act primarily as **contextual colour signals**.
 
-| Emoji | Meaning |
-|-------|---------|
-| 💚 | eco themes, nature, “green energy” |
-| 💛 | light positivity, cheerful, sunny |
+| Emoji | Usage Pattern |
+|-------|---------------|
+| 💛 | cheerful/light positivity |
+| 💚 | nature/eco themes |
 | 🧡 | warm but less intimate than ❤️ |
-| 💜 | solidarity, support, aesthetics |
-| 🤍 | purity, calm, condolences |
+| 💜 | solidarity or aesthetic |
+| 🤍 | calm, purity, condolences |
 | 🖤 | goth, dark humour, mourning |
 
-They indicate **mood**, not deep personal emotion.
+Tone varies strongly with context.
 
 ---
 
-# 3. Ellipsis — `…` as a Nonverbal Marker
+# 3. Ellipsis `…` as a Nonverbal Marker
 
-The ellipsis functions as a *nonverbal emotional signal*:
+Ellipsis is treated as a **nonverbal emotional signal**, not punctuation.
+
+Primary functions:
 
 - hesitation  
 - doubt  
-- discomfort  
-- implied continuation  
 - emotional pause  
 - softening  
-- subtle tension  
+- tension  
+- avoidance  
+- implied continuation  
 
-Examples:
+Examples:  
 - “Sure… if you say so.”  
 - “I’m fine… really.”  
 - “Oh. Okay…”  
 
-Almost never neutral.
+Tone categories:  
+`hesitation`, `emotional tension`, `avoidance`
 
 ---
 
 # 4. Emojis as Emotional Triggers
 
-Nonverbal signals **not only express** emotions —  
-they also **evoke** emotions in the receiver.
+Emojis not only express emotion — they **evoke** emotional reactions in the receiver.
 
 Examples:
 
-- 😂😂😂 → joy for insiders, humiliation for outsiders  
+- 😂😂😂 → bonding for insiders, humiliation for outsiders  
 - ❤️ → warmth for some, sadness/jealousy for others  
-- 😏 → flirt for some, condescension for others  
-- 🩷 → comfort or “too sweet”  
-- … → safe pause or ominous silence  
+- 😏 → flirt or condescension depending on relationship  
+- … → soft pause or threatening silence  
 
 Interpretation depends on:
+
 - relationship  
-- emotional state  
-- comfort  
-- insecurity  
-- context  
-- physiology  
+- insecurity vs confidence  
+- fatigue/stress  
+- privacy vs public setting  
+- topic sensitivity  
 
 This variability is modelled in `reaction_logic.md`.
 
@@ -211,29 +210,33 @@ This variability is modelled in `reaction_logic.md`.
 
 # 5. Summary
 
-Emojis = compressed nonverbal behaviour.
+Emojis in BIP serve as:
 
-BIP treats each emoji as:
-- a social action  
-- an emotional cue  
-- a relational signal  
-- an interaction trigger  
+- emotional cues  
+- relational signals  
+- intensity markers  
+- softeners/sharpeners  
+- interaction triggers  
 
-Not as a static “emotion label”.
+They are not static labels but dynamic components of human-aligned interpretation.
 
 ---
----
-## 6. Intentionality Notes (Becia v1.1)
 
-Emoji do not encode emotion alone — they often carry a communicative intention.
+# 6. Intentionality Notes (v1.1)
+
+Emojis often signal **communicative intention**, not emotion alone.
 
 Examples:
-- 😊 used to soften a critical or doubtful message  
-- 😅 used to hide tension while appearing playful  
-- … used to distance softly without rejecting  
-- 😏 used to maintain closeness through teasing  
 
-In BECIA v1.1 the interpretation of an emoji depends on:
-**Intention × Relationship × Context × State × Expected Reaction**
+- 😊 softening criticism  
+- 😅 hiding tension  
+- … distancing without rejecting  
+- 😏 maintaining playful closeness  
 
-This extends emoji semantics from emotional labels to communicative functions.
+Intentionality interacts with:
+
+```
+Intention × Relationship × Context × State × Expected Reaction
+```
+
+This expands emoji semantics from *emotion* to *social function*.
