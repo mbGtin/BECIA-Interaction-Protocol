@@ -42,3 +42,9 @@
   },
   "required": ["id", "text", "language", "tone", "context_note"]
 }
+"mismatch_magnitude": {
+  "type": "number",
+  "minimum": 0.0,
+  "maximum": 1.0,
+  "description": "Scalar measure (0.0–1.0) representing the degree of mismatch between the sender's intention and the receiver's likely reaction."
+}
