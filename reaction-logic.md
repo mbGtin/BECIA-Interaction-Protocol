@@ -1,272 +1,264 @@
 # Reaction Logic — BECIA Interaction Protocol (BIP)
+### Behavioral Emotion & Context Inference Architecture  
 ### Version: v1.1 (Intentionality Update)
 
-This document explains how the **BECIA Interaction Protocol (BIP)** models  
-the receiver’s emotional reaction to a message based on:
+This document defines the **interpretive mechanics** used in the  
+BECIA Interaction Protocol for understanding how emojis, tone markers,  
+contextual cues and state-related modifiers interact to shape  
+the receiver’s emotional reaction.
 
-- emojis  
-- tone  
-- communicative intention  
-- relationship  
-- context  
-- emotional baseline  
-- physiology  
-- environment  
-
-BIP treats emojis as **interaction triggers**, not fixed sentiment markers.
+The goal is to model **dynamic human-like inference**,  
+where meaning is not encoded in the emoji itself,  
+but emerges from a multi-factor interaction.
 
 ---
 
-# 1. Core Idea
+# 1. Core Interpretive Equation
 
-Emotional interpretation is **dynamic**, not static.
-
-A receiver’s reaction is shaped by six interacting factors:
+BECIA models emotional interpretation as:
 
 ```
 Reaction ≈ Intention × Relationship × Context × State × Physiology × Environment
 ```
 
-Changing any factor can flip meaning:
+Where:
 
-- humour → humiliation  
-- teasing → hostility  
-- affection → sadness  
-- softening → passive-aggressiveness  
+- **Intention** — the sender’s communicative motive  
+- **Relationship** — social positioning between participants  
+- **Context** — situational and topical frame  
+- **State** — emotional baseline of the receiver  
+- **Physiology** — physical or sensory modifiers  
+- **Environment** — ambient and situational conditions  
 
----
-
-# 2. Sender vs Receiver Interpretation
-
-BIP **separates**:
-
-### ■ Sender Intention  
-What the sender *meant* to communicate.
-
-### ■ Receiver Reaction  
-What emotion the receiver is *likely* to experience.
-
-This difference is crucial:  
-the same emoji may comfort one person and hurt another.
+A variation in *any* dimension can invert meaning  
+(e.g., humour → humiliation, warmth → sadness, tease → threat).
 
 ---
 
-# 3. Relationship Context
+# 2. Sender vs Receiver Separation
 
-Relationship heavily modulates meaning.
+BECIA explicitly separates:
 
-| Relationship | Likely Reaction to Emojis |
-|-------------|---------------------------|
-| close friend | teasing = playful |
-| acquaintance | teasing = risky |
-| partner | heart = intimacy |
-| ex-partner | heart = pain or confusion |
-| colleague | 😂 may feel mocking |
-| authority | ellipsis may feel threatening |
+### 2.1 Sender Intention  
+The communicative function of the message  
+(e.g., softening, distancing, teasing, reassurance).
 
-Interpretation is never “emoji-only”.
+### 2.2 Receiver Reaction  
+The emotional interpretation based on the receiver’s internal and external state.
 
----
+This enables modelling of **mismatches** such as:
 
-# 4. Emotional State of the Receiver
+- reassurance → still anxious  
+- humour → interpreted as mockery  
+- tease → interpreted as criticism  
+- softening → interpreted as passive-aggressive  
 
-The **baseline** state changes the emotional filter:
-
-| State | Effect |
-|-------|--------|
-| calm | messages read positively |
-| stressed | humour feels heavy |
-| lonely | hearts can feel sad |
-| overwhelmed | smirks feel harsher |
-| insecure | teasing feels like criticism |
-| connected | warmth is amplified |
+Human communication is inherently asymmetrical;  
+BECIA preserves this asymmetry.
 
 ---
 
-# 5. Physiology
+# 3. Relationship as a Primary Modifier
 
-Physiology affects tone perception and emotional tolerance.
+Relationship defines the **baseline interpretive frame**.
 
-Factors:
+| Relationship Type | Typical Interpretation Pattern |
+|-------------------|-------------------------------|
+| close friend | humour is safe; smirk = playful tease |
+| acquaintance | humour may feel risky or ambiguous |
+| romantic partner | hearts = intimacy; smirk = flirt |
+| former partner | hearts = pain; smirk = hostility |
+| colleague | 😂 may feel like public mockery |
+| authority figure | ellipsis (`…`) may feel threatening |
 
-- fatigue  
-- illness  
-- hunger  
-- physical pain  
-- sensory overload  
-- overstimulation  
-- hormonal stress  
-- lack of sleep  
-
-**Effects:**
-
-- teasing may feel aggressive  
-- humour may feel irritating  
-- ellipsis increases anxiety  
-- emoji intensity feels “too loud”  
-
-### How physiology is inferred:
-
-- response delays or abrupt replies  
-- typos and autocorrect errors  
-- inconsistent punctuation  
-- message length shifts  
-- spikes in profanity  
-- tone switching  
-- reduced or excessive emoji use  
-
-These cues **do not diagnose** anything — they simply inform interpretation.
+Relationship is not static; it shifts based on interaction history.
 
 ---
 
-# 6. Environment
+# 4. Contextual Modifiers
 
-Environment includes:
-
-- public vs private  
-- noise level  
-- movement (on the bus, walking)  
-- work vs home  
-- late-night vs daytime  
-- group chat vs private chat  
-
-**Effects:**
-
-- fragmented attention = softer reading  
-- public setting = reduced openness  
-- emotional topics at night = stronger sensitivity  
-- noisy or stressful environment = harsher tone perception  
-
-### Inference cues:
-
-- time of message  
-- message fragmentation  
-- sudden silence  
-- switching between formal/informal  
-- mixed clarity  
-- short, clipped replies  
-
----
-
-# 7. Social Meaning of Emojis
-
-Emojis perform **social actions**, not emotional labels.
+Context determines **how appropriate** an emoji or tone feels.
 
 Examples:
 
-- 😂😂😂 = bonding or humiliation  
-- ❤️ = trust or grief  
-- 😏 = flirt or condescension  
-- … = gentle pause or silent judgment  
+- during conflict → smirk intensifies threat  
+- during apology → ellipsis may feel like judgment  
+- during emotional disclosure → soft emojis reduce tension  
+- during correction or evaluation → 😂 may feel humiliating  
+- in celebrations → hearts signal group solidarity  
 
-Meaning depends on the **interaction**, not the symbol.
-
----
-
-# 8. Context Modifiers
-
-| Context | Reaction Pattern |
-|---------|------------------|
-| apology | ellipsis feels threatening |
-| correction | 😂 feels humiliating |
-| celebration | hearts feel supportive |
-| argument | smirk intensifies conflict |
-| disclosure | soft emojis reduce tension |
-| insecurity | teasing feels hostile |
+Contextual relevance is evaluated before tone is assigned.
 
 ---
 
-# 9. Physiology Modifiers (Detailed)
+# 5. State (Receiver Baseline)
 
-### 9.1 Fatigue  
-- low emotional tolerance  
-- sharper reading  
-- teasing feels heavy  
-- warmth feels overwhelming  
+The receiver’s emotional baseline modulates sensitivity.
 
-### 9.2 Illness / discomfort  
-- resilience drops  
-- neutral tone may feel cold  
-- emojis feel intense or misplaced  
+| State | Effect on Interpretation |
+|-------|--------------------------|
+| calm | emojis read more positively |
+| stressed | humour feels heavy, irritating |
+| lonely | hearts evoke sadness, longing |
+| overwhelmed | teasing feels sharp |
+| insecure | smirk feels condescending |
+| emotionally connected | warmth is amplified |
 
-### 9.3 Hunger / sensory overload  
-- irritability  
-- impulsivity  
-- reduced patience  
+State is inferred from conversational patterns, not assumed intuitively.
 
 ---
 
-# 10. Environmental Modifiers (Detailed)
+# 6. Physiology as an Interpretive Modifier
 
-### Weather  
-- sunlight → positive bias  
-- cold/rain → negative bias  
+Physiology includes physical, sensory and cognitive conditions  
+such as fatigue, pain, overstimulation, illness or hunger.
 
-### Noise / crowd  
-- negativity bias increases  
-- soft emojis feel fake  
-- humour feels irritating  
+Physiological load influences:
 
-### Privacy  
-- private: open, soft interpretations  
-- public: guarded, defensive interpretations  
+- tolerance for sharp tone  
+- emotional resilience  
+- reading speed and precision  
+- meaning bias toward negative or positive interpretations  
+- emoji “loudness” vs emotional flattening
 
----
+### 6.1 Physiological Indicators in Text  
+Physiology is inferred from measurable language patterns, e.g.:
 
-# 11. Emoji-by-Emoji Reaction Patterns
+- abrupt message length shifts  
+- fast/fragmented replies  
+- inconsistent punctuation (`…`, `!!!`)  
+- autocorrect errors / typos  
+- unusually long pauses  
+- profanity spikes  
+- reduced emoji use  
+- excessive emoji use  
+- abrupt tone switching  
 
-## 😂 — Full Laugh
-Positive: shared humour  
-Negative: humiliation, dominance
-
-## 😅 — Soft Laugh
-Positive: friendliness  
-Negative: avoidance, downplaying
-
-## 😏 — Smirk
-Positive: flirt, playful tease  
-Negative: condescension, sharpness
-
-## ❤️ — Red Heart
-Positive: warmth, trust  
-Negative: longing, sadness
-
-## 🩷 — Pink Heart
-Positive: gentle support  
-Negative: performative sweetness
-
-## `…` — Ellipsis
-Positive: soft hesitation  
-Negative: silent judgment, tension  
+These are not diagnoses;  
+they are **informational correlates** affecting interpretation.
 
 ---
 
-# 12. Summary Rule for Annotation
+# 7. Environment as an Interpretive Frame
 
-> **Meaning is the interaction between  
-> Intention, Relationship, Context, State, Physiology and Environment —  
-> not the emoji alone.**
+Environment describes the situational or ambient context:
 
-This is why emoji interpretation is inherently **contextual, personal and dynamic**.
+- private vs public space  
+- home vs workplace  
+- quiet vs noisy environment  
+- daytime vs late-night timing  
+- single-tasking vs multitasking  
+- group vs one-to-one communication  
+
+Environment influences **expectations**,  
+which in turn modify tone judgment.
+
+### 7.1 Environmental Indicators  
+Derived from timing, rhythm and structural clues:
+
+- late-night messages → higher emotional sensitivity  
+- fragmented replies → divided attention  
+- sudden topic shifts → environmental noise  
+- mixed formal/informal tone → workplace constraints  
+- clipped replies → limited privacy  
+- repeated “sorry?” / “what?” → interruptions  
+
+Environment never dictates meaning;  
+it modifies *tone thresholds*.
 
 ---
 
-# 13. Intentionality & Reaction Mismatch (v1.1)
+# 8. Social Function of Emojis
 
-BECIA v1.1 explicitly separates:
+Emojis act as **nonverbal social actions**, not static labels.
 
-- **tone** → surface sound  
-- **intention** → social motive  
-- **reaction** → emotional impact  
+They encode:
 
-Typical mismatch patterns:
+- inclusion / exclusion  
+- dominance / equality  
+- intimacy / distance  
+- performative vs private emotion  
+- softening / sharpening of tone  
+- affective intensification  
 
-- reassurance → receiver still anxious  
-- softening refusal → receiver feels rejected  
-- humour masking tension → receiver feels confused or hurt  
-- teasing for closeness → receiver feels attacked  
+Emojis are behavioural triggers, not emotional endpoints.
 
-Intentionality captures the *why*.  
-Reaction captures the *impact*.
+---
 
-Both are essential for true human-aligned interpretation.
+# 9. Emoji Reaction Patterns (High-Impact Set)
+
+### 9.1 😂 — Full Laugh  
+**Positive:** shared humour, insider bonding  
+**Negative:** humiliation, mockery, group dominance  
+
+### 9.2 😅 — Soft Laugh  
+**Positive:** polite embarrassment, small tension release  
+**Negative:** avoidance, downplaying seriousness  
+
+### 9.3 😏 — Smirk  
+**Positive:** flirt, confident tease  
+**Negative:** elegant mockery, condescension  
+
+### 9.4 ❤️ — Red Heart  
+**Positive:** deep affection, trust, emotional transparency  
+**Negative:** sadness, longing, grief, jealousy  
+
+### 9.5 🩷 — Pink Heart  
+**Positive:** gentle warmth, supportive tone  
+**Negative:** perceived insincerity, performative kindness  
+
+### 9.6 `…` — Ellipsis  
+**Positive:** soft pause, hesitation, emotional space  
+**Negative:** threat, judgment, withdrawal  
+
+---
+
+# 10. Reaction Logic Summary
+
+Interpretation arises from the full interaction of:
+
+```
+Intention × Relationship × Context × State × Physiology × Environment
+```
+
+Emojis do not carry fixed meaning.  
+They trigger **dynamic, context-dependent inference**.
+
+BECIA models:
+
+- tone  
+- intention  
+- reaction  
+- mismatches  
+- state and environment influence  
+- social and relational nuance  
+
+This enables more human-aligned emotional interpretation  
+than any static sentiment framework.
+
+---
+
+# 11. Mismatch Detection (Intentionality Layer, v1.1)
+
+BECIA v1.1 identifies when **intention ≠ reaction**.
+
+Examples:
+
+- *intention:* reassurance  
+  *reaction:* lingering anxiety  
+
+- *intention:* polite distancing  
+  *reaction:* perceived rejection  
+
+- *intention:* humour masking tension  
+  *reaction:* confusion or hurt  
+
+- *intention:* tease to maintain closeness  
+  *reaction:* perceived criticism  
+
+Mismatch detection strengthens human-like interpretive modelling  
+and reflects real interpersonal dynamics.
+
+---
+
+# End of Document
