@@ -1,176 +1,196 @@
-# Annotation Guidelines — BECIA Interaction Protocol (BIP)
-### Version: v1.1 (Intentionality Update)
+# BECIA Annotation Guidelines (BIP Workflow)
 
-These guidelines describe how to annotate text using the  
-**BECIA Interaction Protocol (BIP)** — a multi-layer framework for interpreting emojis, tone, context, intention and emotional reaction.
+Version: v1.1 — Intentionality Update  
+Scope: How to annotate messages using the BECIA Interaction Protocol (BIP).
 
-All examples in v1.1 use **English (EN)**.
-
----
-
-# 1. JSONL Schema
-
-Each entry in `data/samples.jsonl` follows:
-
-```json
-{
-  "id": "string",
-  "text": "string",
-  "language": "EN",
-  "emojis": ["…", "😂"],
-  "tone": ["sarcasm", "humour"],
-  "intention": "string (optional)",
-  "context_note": "string"
-}
-```
-
-### Required fields
-
-| Field | Description |
-|-------|-------------|
-| `id` | Unique identifier |
-| `text` | Raw message |
-| `language` | Language code (EN in v1.1) |
-| `tone` | 1–3 tone labels |
-| `context_note` | Short reasoning summary |
-
-### Optional field
-
-| Field | Description |
-|-------|-------------|
-| `intention` | Sender's communicative motive |
+These guidelines describe the **step-by-step workflow** for turning a raw message into a structured BECIA entry (e.g. in `data/samples.jsonl`).
 
 ---
 
-# 2. Minimal Emoji → Tone Mapping
+## 1. Core Principles
 
-See `emoji_semantics.md` for full descriptions.
+1. **Text ≠ Emotion**  
+   Never assume that literal text fully expresses the emotional state.  
+   Emojis, punctuation, timing and relationship can completely invert the surface meaning.
 
-| Emoji | Primary Tone | Notes |
-|-------|--------------|-------|
-| 😂 | humour | big laugh; high intensity |
-| 😅 | micro-humour | polite embarrassment; tension release |
-| 😏 | elegant mockery / tease | playful dominance or superiority |
-| ❤️ | deep affection | emotional closeness |
-| 🩷 | friendly warmth | soft support; feminine-coded |
-| 💙 | symbolic positivity | neutral support, thematic colour |
-| … | hesitation | pause, doubt, emotional space |
+2. **Emoji are nonverbal markers**  
+   Emoji are not decoration. They function like facial expressions, tone of voice, body language.
 
----
+3. **Context is layered**  
+   Interpretation depends on:  
+   - who is talking to whom (relationship),  
+   - what is happening (context),  
+   - in what state the sender is (state, physiology),  
+   - in what environment (privacy, time pressure, noise).
 
-# 3. Tone Categories
+4. **Intention matters**  
+   The same emoji/tone can serve different motives: soften, attack, deflect, seek reassurance, mask vulnerability.
 
-Annotate **1–3 tones** per message.
-
-| Tone | Description |
-|------|-------------|
-| humour | explicit amusement |
-| micro-humour | small polite laugh |
-| sarcasm | intent ≠ literal meaning |
-| teasing | playful provocation |
-| elegant mockery | polite superiority |
-| warmth | emotional closeness |
-| deep affection | intimate connection |
-| symbolic positivity | neutral-good support |
-| hesitation | emotional pause |
-| mild frustration | soft irritation |
-| dramatic humour | exaggerated joking |
-| supportive | gentle encouragement |
-
-**Valid combinations:**
-- `["teasing", "humour"]`
-- `["warmth", "deep affection"]`
-- `["sarcasm", "elegant mockery"]`
+5. **Mismatch is a first-class signal**  
+   When tone/emoji and topic diverge (e.g. trauma + 😂), this is not noise but a key variant of behaviour.
 
 ---
 
-# 4. Annotation Rules
+## 2. BECIA Six-Factor Frame
 
-1. **Emoji-first interpretation**  
-   Emojis anchor tone and often override literal text.
+When annotating, you are implicitly or explicitly reasoning over six axes:
 
-2. **Maximum of 3 tone labels**  
-   Keep annotations concise.
+1. **Intention** – what the sender is trying to achieve socially.  
+2. **Relationship** – how close / formal / asymmetric the dyad is.  
+3. **Context** – the conversational frame (small talk, conflict, crisis, work, etc.).  
+4. **State** – sender’s baseline emotional/mental state.  
+5. **Physiology** – known physical factors (fatigue, pain, substance use, sensory overload).  
+6. **Environment** – place, time, pressure, privacy, distractions.
 
-3. **Treat `…` as a nonverbal signal**  
-   Always interpret ellipsis as emotional or relational, never neutral.
-
-4. **Avoid sentiment-style labels**  
-   No “joy/sadness/anger” unless directly expressed.
-
-5. **Context note is mandatory**  
-   Provide one short expert explanation.
-
-6. **Use supporting documents**  
-   - `emoji_semantics.md`  
-   - `reaction_logic.md`  
-
-7. **Consider relationship + history**  
-   Tone changes depending on closeness and expectations.
-
-8. **Document mismatches**  
-   If sender intention ≠ expected receiver reaction, highlight it.
+You do **not** need to fill all six fields in every entry,  
+but you should be **aware** that these influences exist and inform your choices.
 
 ---
 
-# 5. Interpretation Workflow (BIP)
+## 3. High-Level Workflow
 
-Annotators should follow all seven steps:
+For each message you annotate:
 
-### Step 1 — Identify emojis  
-Extract all nonverbal tokens: emojis, ellipsis, repetition, emphasis.
-
-### Step 2 — Identify relationship  
-Friend, partner, stranger, authority, formal/informal, etc.
-
-### Step 3 — Identify context  
-Topic type: joke, apology, correction, disclosure, narrative, etc.
-
-### Step 4 — Infer baseline emotional state  
-Likelihood of stress, fatigue, calmness, loneliness, overload.
-
-### Step 5 — Assign 1–3 tones  
-Tone derives from interaction of signal × context × state.
-
-### Step 6 — Add `context_note`  
-Short (1–2 sentences) describing interpretation rationale.
-
-### Step 7 — Validate  
-Check consistency with:
-
-- `emoji_semantics.md`  
-- `reaction_logic.md`  
+1. Identify the raw **signal** (text + emoji).  
+2. Identify the **relationship** between participants.  
+3. Identify the **local context** of this message.  
+4. Infer the sender’s **baseline state** (if knowable).  
+5. Assign **1–3 tones** that best capture how it comes across.  
+6. Assign an **intention** (what the sender wants to achieve).  
+7. Evaluate **mismatch** (text vs tone vs emoji).  
+8. Write a **context_note** that makes the reading reproducible.  
+9. Validate against `emoji_semantics.md` and `reaction-logic.md`.
 
 ---
 
-# 6. Purpose of BIP Guidelines
+## 4. Step-by-Step BIP Workflow
 
-These guidelines aim to:
+### Step 1 — Capture the raw message
 
-- improve annotation consistency  
-- model human-level nuance  
-- go beyond flat emotion categories  
-- represent contextual emotional reasoning  
-- support dataset creators and AI researchers  
+Record:
+
+- `text` — the exact message text, as sent.  
+- `emojis` — a list of emoji in **order of appearance**.  
+- `language` — ISO-like language tag, e.g. `"EN"`, `"PL"`.
+
+If the message is *only* emoji, `text` can be empty string, but `emojis` must be filled.
+
+> Example  
+> Text: `"No super 😂"`  
+> Emojis: `["😂"]`  
+> Language: `"PL"`
 
 ---
 
-# 7. Intentionality (v1.1)
+### Step 2 — Identify relationship_type
 
-The **intentionality field** captures *why* the sender shaped the message this way.
+Define **who** is talking to whom:
 
-Examples of intentions:
+Examples of allowed values (you can extend locally):
 
-- reassurance  
-- distancing  
-- softening a negative message  
-- teasing to maintain closeness  
-- masking vulnerability  
-- signalling trust  
+- `close_friend`  
+- `acquaintance`  
+- `colleague`  
+- `boss`  
+- `subordinate`  
+- `partner`  
+- `ex_partner`  
+- `family`  
+- `stranger`  
+- `ai_assistant`  
 
-Annotate intention when:
+Pick the one that best fits the **current** relationship in this conversation, not in some abstract history.
 
-- it is clear from the message, **and**
-- context suggests a functional purpose behind the tone.
+---
 
-Intentionality is optional but recommended for advanced annotations in v1.1.
+### Step 3 — Identify context_type
+
+In what **scene** is this message happening?
+
+Suggested controlled vocabulary (extendable):
+
+- `small_talk`  
+- `logistics` (arranging, planning)  
+- `banter` (light teasing, jokes)  
+- `support` (emotional support, listening)  
+- `conflict` (argument, tension)  
+- `post_conflict_cooling`  
+- `crisis` (acute distress, breakdown)  
+- `work_task` (professional, task-oriented)  
+- `meta_conversation` (discussing the relationship / conversation itself)
+
+Choose the context that fits the **local window** around the message.
+
+---
+
+### Step 4 — Infer baseline sender_state
+
+Annotate how the sender seems to be *coming into* this message.
+
+Examples:
+
+- `calm`  
+- `playful`  
+- `tired`  
+- `irritated`  
+- `overloaded` (too many inputs / tasks / emotions)  
+- `shut_down` (minimal affect, emotionally withdrawn)  
+- `euphoric`  
+- `anxious`  
+- `numb` (low feeling, flat tone)  
+
+Only fill this when there is enough context.  
+If uncertain, use `unknown` or leave the field absent.
+
+---
+
+### Step 5 — Assign 1–3 tones
+
+`tones` describes **how the message lands** — perceived emotional colouring, not just sentiment.
+
+You can use combinations like:
+
+- `warm`, `reassuring`  
+- `dry`, `matter_of_fact`  
+- `ironic`, `teasing`  
+- `bitter`, `resentful`  
+- `playful`, `chaotic`  
+- `passive_aggressive`  
+- `mocking`, `hostile`  
+- `self_deprecating`  
+- `detached`, `cold`
+
+Pick **1–3** tones that jointly describe the feel.  
+Avoid long lists; be precise instead of exhaustive.
+
+---
+
+### Step 6 — Add intention
+
+`intention` describes **why** the sender uses this wording/emoji pattern.
+
+Common intentions (you can reuse and extend those in `intentionality-examples.md`):
+
+- `soften_negative_message`  
+- `reassure_through_humour`  
+- `maintain_closeness_through_teasing`  
+- `mask_vulnerability`  
+- `deflect_topic`  
+- `test_boundaries`  
+- `deescalate_conflict`  
+- `provoke_reaction`  
+- `signal_distance_without_rejection`  
+- `invite_emotional_disclosure`
+
+If intention is ambiguous, note the **most plausible** one given relationship + context, and clarify in `context_note`.
+
+---
+
+### Step 7 — Evaluate mismatch_status
+
+`mismatch_status` expresses whether **text, tone and emoji** align.
+
+Suggested values:
+
+- `match` — emotional meaning and literal content are aligned.  
+- `soft_mismatch` — slight dissonance (e.g. joke used to soften real
